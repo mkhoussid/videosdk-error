@@ -1,0 +1,38 @@
+{
+	"name": "booking-alt",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"start": "node server",
+		"server": "nodemon server",
+		"client": "npm run start --prefix client",
+		"dev": "concurrently \"npm run server\" \"npm run client\"",
+		"lint": "eslint './src/**/*.{ts,tsx}'",
+		"lint:fix": "eslint './src/**/*.{ts,tsx}' --fix",
+		"heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"axios": "^0.26.1",
+		"bcryptjs": "^2.4.3",
+		"fastify": "^3.27.4",
+		"fastify-cookie": "^5.6.0",
+		"fastify-cors": "^6.0.3",
+		"fastify-formbody": "^5.2.0",
+		"fastify-helmet": "^7.0.1",
+		"fastify-multer": "^2.0.2",
+		"fastify-qs": "^3.0.1",
+		"fastify-static": "^4.5.0",
+		"jsonwebtoken": "^8.5.1",
+		"mongodb": "^4.4.1",
+		"mongoose": "^6.2.4",
+		"uuid4": "^2.0.2"
+	},
+	"devDependencies": {
+		"concurrently": "^7.0.0",
+		"nodemon": "^2.0.15"
+	}
+}
